@@ -1,3 +1,2 @@
 # ProgCodebase
-This consis of mainly basics
-\
+This consis of mainly basics of interview coding.
