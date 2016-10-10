@@ -28,9 +28,6 @@ public class LowestCommonAncestor {
         resetRecursionVariables();
         search(root, v2, nodesAlongThePathOfV2);
 
-//        Util.printList(nodesAlongThePathOfV1);
-//        Util.printList(nodesAlongThePathOfV2);
-
         int ancestor = findAncestor(nodesAlongThePathOfV1,nodesAlongThePathOfV2);
         if(ancestor == -1) {
             System.out.print("There is no common ancestor.");
@@ -50,7 +47,13 @@ public class LowestCommonAncestor {
         }
 
         nodesAlongThePath.add(root.data);
-        //Util.printList(nodesAlongThePath);
+
+        /**In case of BST tree the code would look like:
+          if (val < root.data)       
+            search(root.left, val, nodesAlongThePath);
+          else
+            search(root.right, val, nodesAlongThePath);**/
+
         search(root.left, val, nodesAlongThePath);
         search(root.right, val, nodesAlongThePath);
 
@@ -65,15 +68,6 @@ public class LowestCommonAncestor {
                 ans = i;
         }
         return ans;
-    }
-
-
-    /**
-     * To fin Lowest common ancestor in BST can be same as Binary Tree
-     *  or it could be done in a much simpler manner
-     **/
-    public void lcaInBinarySearchTree() {
-
     }
 
     private void resetRecursionVariables() {
