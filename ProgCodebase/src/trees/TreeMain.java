@@ -9,13 +9,16 @@ public class TreeMain {
 
     public static void main(String args[]) throws IOException {
         Tree tree = new Tree();
-        Node root = tree.createBalancedBinarySearchTree();
 
 //        TreeTraverse treeTraverse = new TreeTraverse();
 //        treeTraverse.borderTraversal(root);
 
-        LowestCommonAncestor lowestCommonAncestor = new LowestCommonAncestor(10, 35, root);
-        lowestCommonAncestor.lcaInBinaryTree();
+//        LowestCommonAncestor lowestCommonAncestor = new LowestCommonAncestor(10, 35, root);
+//        lowestCommonAncestor.lcaInBinaryTree();
 
+        Node root = tree.createBinaryTree();
+
+        LevelNodes levelNodes = new LevelNodes(3);
+        levelNodes.printLevelNodes(root,0);
     }
 }

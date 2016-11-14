@@ -49,7 +49,7 @@ public class LowestCommonAncestor {
         nodesAlongThePath.add(root.data);
 
         /**In case of BST tree the code would look like:
-          if (val < root.data)       
+          if (val < root.data)
             search(root.left, val, nodesAlongThePath);
           else
             search(root.right, val, nodesAlongThePath);**/
